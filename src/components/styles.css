@@ -1,0 +1,126 @@
+.input-container {
+  width: fit-content;
+  margin: 8px auto;
+  text-align: left;
+  image-orientation: initial;
+}
+
+.input-style {
+  background-color: #fefeff;
+  padding: 8px 16px;
+  margin-top: 4px;
+  border-radius: 8px;
+  width: 240px;
+  border: 0px;
+  outline: 0px;
+}
+
+.submit {
+  background-color: #205542;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.enxuto {
+  width: fit-content;
+  margin-left: 8px;
+}
+
+.editBtn {
+  background-color: #064BB4;
+}
+
+.submit:hover {
+  background-color: #064616;
+  color: white;
+
+}
+
+.editBtn:hover {
+  background-color: #003079;
+  color: white;
+}
+
+.label {
+  color: black;
+  font-weight: bold;
+}
+
+.btn-group button {
+  background-color: bisque;
+  border: 1px #205542;
+  color: #205542;
+  font-weight: bold;
+  padding: 12px 36px;
+  cursor: pointer;
+  float: left;
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:hover {
+  background-color: #205542;
+  color: bisque;
+}
+
+.btn-active {
+  background-color: #07b580 !important;
+  color: bisque !important;
+}
+
+.titulo-artigo {
+  font-weight: bold;
+  font-size: x-large;
+  padding: 8px;
+}
+
+.autor-artigo {
+  padding-left: 8px;
+  margin-bottom: 16px;
+  margin-right: 70%;
+}
+
+.component-container {
+  background-color: #C5F1E4;
+  margin: 8px 36px;
+  border-radius: 16px;
+  padding: 16px 24px;
+  text-align: left;
+}
+
+.exit {
+  background-color: #07b580;
+  color: black;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.exit:hover {
+  background-color: #05815c;
+  color: black;
+}
+
+.excluir {
+  background-color: #8E2424;
+  color: bisque;
+}
+
+.excluir:hover {
+  background-color: #521010;
+  color: bisque;
+}
+
+.icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.default-link-appearance {
+  color: #205542;
+  font-weight: bold;
+}
