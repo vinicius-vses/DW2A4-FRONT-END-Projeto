@@ -124,3 +124,45 @@
   color: #205542;
   font-weight: bold;
 }
+
+.footer-container{
+  padding: 24px;
+  background-color:#07b580;
+}
+
+.footer-container a{
+  color: #205542;
+  margin: 8px;
+}
+
+.footer-container span{
+  font-weight: bold;
+  font-size:x-large;
+  margin: 16px;
+}
+
+.header-container{
+  display: flex;
+  align-items: center;
+  background-color:#07b580;
+  padding: 24px;
+  text-align: right;
+}
+
+.header-container span{
+  color: #205542;
+  margin: 8px;
+}
+
+.header-container button{
+  margin-right: auto;
+  background-color:#05815c;
+  outline: 0px;
+  border: 0px;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+#cadastrar-btn{
+  width: fit-content;
+}

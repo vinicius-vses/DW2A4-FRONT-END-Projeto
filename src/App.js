@@ -1,6 +1,9 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 import ExplorarArtigos from './pages/ExplorarArtigos';
 import Cadastro from './pages/Cadastro';
 import CriarArtigo from './pages/CriarArtigo';
@@ -14,6 +17,7 @@ import LerArtigo from './pages/LerArtigo';
 function App() {
   return (
     <Router>
+      <Header isLogged={false} goBackTo='/cadastro'/>
       <a>Teste as rotas do site:</a>
       <ul>
         <li>
@@ -47,6 +51,7 @@ function App() {
           <Route path='/ler' element={<LerArtigo/>}></Route>
           <Route path='/editar' element={<EditarArtigo/>}></Route>
       </Routes>
+      <Footer/>
     </Router>
   );
 }
