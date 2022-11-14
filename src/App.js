@@ -17,7 +17,7 @@ import LerArtigo from './pages/LerArtigo';
 function App() {
   return (
     <Router>
-      <Header isLogged={false} goBackTo='/cadastro'/>
+      <Header isLogged={false} goBack={true}/>
       <a>Teste as rotas do site:</a>
       <ul>
         <li>

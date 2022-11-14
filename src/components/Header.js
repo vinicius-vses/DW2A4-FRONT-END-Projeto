@@ -12,13 +12,13 @@ function Header(props) {
     
     Não aparecer header ou footer no Login/Cadastro
     */
-    const { isLogged, goBackTo } = props;
+    const { isLogged, goBack } = props;
     const navigate = useNavigate();
 
     return (
         <div className="header-container">
             {
-                goBackTo
+                goBack
                     ? <button onClick={() => navigate(-1)}>
                         <SmallIcon
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Google_material_icons_arrow_back_24px.svg/1024px-Google_material_icons_arrow_back_24px.svg.png"
