@@ -1,8 +1,22 @@
 import ItemArtigo from "./ItemArtigo"
+import { Link, useNavigate } from "react-router-dom"
 
 function Artigos(props) {
+    const navigate = useNavigate();
+
+    const onEditarArtigoBtn = e => {
+        e.preventDefault();
+        navigate('/editar');
+    }
+
+    const onLerArtigoBtn = e => {
+        e.preventDefault();
+        navigate('/ler');
+    }
+
     let idArtigo, titulo, autor
-    const { idUser, itens, onClickLer, onClickEditar } = props;
+    const { idUser, itens } = props;
+
     return itens.map(item => {
         idArtigo = item.id
         titulo = item.titulo
@@ -14,9 +28,9 @@ function Artigos(props) {
                         titulo={titulo}
                         autor={autor}
                         id={idArtigo}
-                        onClick={onClickLer}
+                        onClick={onLerArtigoBtn}
                     />
-                    <button className="input-style submit enxuto editBtn" onClick={onClickEditar}>Editar</button>
+                    <button className="input-style submit enxuto editBtn" onClick={onEditarArtigoBtn}>Editar</button>
                 </div>
             )
         return (
@@ -25,7 +39,7 @@ function Artigos(props) {
                     titulo={titulo}
                     autor={autor}
                     id={idArtigo}
-                    onClick={onClickLer}
+                    onClick={onLerArtigoBtn}
                 />
             </div>
         )

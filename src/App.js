@@ -18,30 +18,13 @@ function App() {
   return (
     <Router>
       <Header isLogged={false} goBack={true}/>
-      <a>Teste as rotas do site:</a>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/login">Faça Login</Link>
-        </li>
-        <li>
-          <Link to="/cadastro">Cadastre-se</Link>
-        </li>
-        <li>
-          <Link to="/artigos">Explorar artigos</Link>
-        </li>
-        <li>
-          <Link to="/criar">Criar um artigo</Link>
-        </li>
-        <li>
-          <Link to="/ler">Ler um artigo</Link>
-        </li>
-        <li>
-          <Link to="/editar">Editar um artigo</Link>
-        </li>
-      </ul>
+          <Link to="/"/>
+          <Link to="/login"/>
+          <Link to="/cadastro"/>
+          <Link to="/artigos"/>
+          <Link to="/criar"/>
+          <Link to="/ler"/>
+          <Link to="/editar"/>
       <Routes>
           <Route exact path='/' element={<Home/>}></Route>
           <Route path='/login' element={<Login/>}></Route>

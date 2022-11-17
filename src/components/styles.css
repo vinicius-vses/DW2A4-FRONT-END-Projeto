@@ -48,7 +48,7 @@
 }
 
 .btn-group button {
-  background-color: bisque;
+  background-color: white;
   border: 1px #205542;
   color: #205542;
   font-weight: bold;
@@ -65,12 +65,12 @@
 
 .btn-group button:hover {
   background-color: #205542;
-  color: bisque;
+  color: white;
 }
 
 .btn-active {
   background-color: #07b580 !important;
-  color: bisque !important;
+  color: white !important;
 }
 
 .titulo-artigo {
@@ -126,7 +126,7 @@
 }
 
 .footer-container{
-  padding: 24px;
+  padding: 16px;
   background-color:#07b580;
 }
 
@@ -145,7 +145,7 @@
   display: flex;
   align-items: center;
   background-color:#07b580;
-  padding: 24px;
+  padding: 4px;
   text-align: right;
 }
 
@@ -159,10 +159,11 @@
   background-color:#05815c;
   outline: 0px;
   border: 0px;
-  padding: 4px 12px;
+  padding: 4px 30px;
   border-radius: 12px;
 }
 
 #cadastrar-btn{
+  font-size: small;
   width: fit-content;
 }

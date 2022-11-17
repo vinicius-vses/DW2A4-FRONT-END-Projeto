@@ -4,7 +4,7 @@ function ItemArtigo(props) {
         <>
             <a className="titulo-artigo">{titulo}</a>
             <br />
-            <a className="autor-artigo">Postado por {autor}</a>
+            <a className="autor-artigo">Postado por {autor}</a><br/>
             <button className="input-style submit enxuto" onClick={onClick}>Ler artigo</button>
         </>
     )

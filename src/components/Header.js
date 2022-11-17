@@ -17,15 +17,12 @@ function Header(props) {
 
     return (
         <div className="header-container">
-            {
-                goBack
-                    ? <button onClick={() => navigate(-1)}>
-                        <SmallIcon
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Google_material_icons_arrow_back_24px.svg/1024px-Google_material_icons_arrow_back_24px.svg.png"
-                            label="Imagem com seta indicando ação de voltar para a tela anterior" />
-                        Voltar
-                    </button>
-                    : ''
+            {goBack
+                ? <button onClick={() => navigate(-1)}>
+                    <SmallIcon
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Google_material_icons_arrow_back_24px.svg/1024px-Google_material_icons_arrow_back_24px.svg.png"
+                        label="Imagem com seta indicando ação de voltar para a tela anterior" /></button>
+                : ''
             }
             {isLogged
                 ? <ProfileIcon />
