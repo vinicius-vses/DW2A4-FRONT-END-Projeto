@@ -17,7 +17,7 @@ import LerArtigo from './pages/LerArtigo';
 function App() {
   return (
     <Router>
-      <Header isLogged={false} goBack={true}/>
+      <Header isLogged={true} goBack={true}/>
           <Link to="/"/>
           <Link to="/login"/>
           <Link to="/cadastro"/>
@@ -29,7 +29,7 @@ function App() {
           <Route exact path='/' element={<Home/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/cadastro' element={<Cadastro/>}></Route>
-          <Route path='/artigos' element={<ExplorarArtigos/>}></Route>
+          <Route path='/artigos' element={<ExplorarArtigos isLogged={true}/>}></Route>
           <Route path='/criar' element={<CriarArtigo/>}></Route>
           <Route path='/ler' element={<LerArtigo/>}></Route>
           <Route path='/editar' element={<EditarArtigo/>}></Route>

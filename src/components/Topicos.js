@@ -7,6 +7,7 @@ import { artigosFilosofica, artigosFinanceira, artigosFisicamental, artigosFunci
 
 function Topicos() {
     const [topico, setTopico] = useState('#financeira');
+    const [nomeTopico, setNomeTopico] = useState('Financeira');
     const [artigos, setArtigos] = useState(artigosFinanceira);
     const [loading, setLoading] = useState(false);
 
@@ -18,15 +19,19 @@ function Topicos() {
             switch (_topico) {
                 case '#financeira':
                     artigos = artigosFinanceira
+                    setNomeTopico('Financeira')
                     break;
                 case '#funcional':
                     artigos = artigosFuncional
+                    setNomeTopico('Funcional')
                     break;
                 case '#fisicamental':
                     artigos = artigosFisicamental
+                    setNomeTopico('Física e Mental')
                     break;
                 case '#filosofica':
                     artigos = artigosFilosofica
+                    setNomeTopico('Filosófica')
                     break;
             }
 
@@ -38,7 +43,7 @@ function Topicos() {
 
     return (
         <div>
-            <a>{loading ? 'CARREGANDO...' : ''}</a>
+            <p style={{margin: '24px 36px'}}>Você está visualizando a secção de artigos de Educação {nomeTopico}</p>
             <div className="btn-group">
                 <button className={topico == '#financeira' ? 'btn-active' : ''}
                     onClick={() => {
@@ -65,10 +70,12 @@ function Topicos() {
                     }
                 >Educação Funcional</button>
             </div>
+            <a className='loading-container'>{loading ? 'CARREGANDO...' : ''}</a>
             <Artigos
                 idUser={1}
                 itens={artigos}
             />
+            {artigos.length <= 2 ? <div style={{minHeight: '45vh'}}></div> : ''}
         </div>
     )
 }

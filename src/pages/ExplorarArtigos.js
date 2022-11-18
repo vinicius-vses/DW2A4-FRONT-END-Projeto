@@ -1,14 +1,31 @@
-import Artigos from "../components/Artigos";
 import Topicos from "../components/Topicos";
+import Input from "../components/Input";
 import { Link, useNavigate } from "react-router-dom"
+import React, { useState } from 'react';
 
-// MOCK PARA TESTE DE ROUTES -> ESTE ARQUIVO DEVE SER AJUSTADO TANTO EM LAYOUT QUANTO FUNCIONAMENTO!
-function ExplorarArtigos() {
+function ExplorarArtigos(props) {
+    const { isLogged } = props
     const navigate = useNavigate();
+
+    const onCriarArtigoBtn = e =>{
+        e.preventDefault();
+        navigate('/criar');
+    }
+
     return (
         <div>
-            <h1>Artigos</h1>
-            <p>Aqui deverá aparecer os artigos</p>
+            <h1 style={{ marginLeft: '36px' }}>
+                Artigos
+                {isLogged ?
+                <input
+                    className="input-style submit right-icon"
+                    style={{marginRight: '36px'}}
+                    value="Criar novo artigo"
+                    type="submit"
+                    onClick={onCriarArtigoBtn}
+                />
+                : ''}
+                </h1>
             <Topicos />
         </div>
     )

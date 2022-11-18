@@ -22,6 +22,11 @@
   padding: 12px;
 }
 
+.right-icon{
+  margin-top: 0%;
+  float: right;
+}
+
 .enxuto {
   width: fit-content;
   margin-left: 8px;
@@ -135,6 +140,10 @@
   margin: 8px;
 }
 
+#footer-margin{
+  min-height: 80px;
+}
+
 .footer-container span{
   font-weight: bold;
   font-size:x-large;
@@ -156,6 +165,7 @@
 
 .header-container button{
   margin-right: auto;
+  margin-left: 8px;
   background-color:#05815c;
   outline: 0px;
   border: 0px;
@@ -166,4 +176,16 @@
 #cadastrar-btn{
   font-size: small;
   width: fit-content;
+}
+
+.loading-container{
+  text-align: center;
+  display: flex;
+  background-color:#205542;
+  color:white;
+  font-weight: bold;
+}
+
+.loading-container a{
+  padding: 24px;
 }

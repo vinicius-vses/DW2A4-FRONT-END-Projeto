@@ -3,7 +3,7 @@ import SmallIcon from "./SmallIcon"
 function ProfileIcon(props) { //O HREF DEVERÁ SER SUBSTITUÍDO PELA PÁGINA DO PERFIL DO USUÁRIO
     const { onClick } = props
     return (
-        <div>
+        <div style={{marginRight: '8px'}}>
             <SmallIcon
                 src="http://cdn.onlinewebfonts.com/svg/img_24787.png"
                 label="Imagem indicando local de clique para área do perfil do usuário" />
