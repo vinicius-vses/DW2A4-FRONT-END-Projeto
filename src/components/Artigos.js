@@ -3,43 +3,42 @@ import { Link, useNavigate } from "react-router-dom"
 
 function Artigos(props) {
     const navigate = useNavigate();
+    const isLogged = (localStorage.getItem('isLogged') === 'true');
 
     const onEditarArtigoBtn = e => {
-        e.preventDefault();
         navigate('/editar');
     }
 
-    const onLerArtigoBtn = e => {
-        e.preventDefault();
-        navigate('/ler');
+    const onLerArtigoBtn = id => {
+        console.log(id)
+        navigate(`/ler/${id}`);
     }
 
-    let idArtigo, titulo, autor
-    const { idUser, itens } = props;
-
+    const { idUser, itens } = props; // os itens deverão vir do Banco de Dados
+    // TO FINISH
     return itens.map(item => {
-        idArtigo = item.id
-        titulo = item.titulo
-        autor = item.autor
-        if (item.idAutor == idUser)
+        let idArtigo = item.id
+        let titulo = item.titulo
+        let autor = item.autor
+        if (item.idAutor == idUser && isLogged)
             return (
-                <div className="component-container">
+                <div key={`artigo-${idArtigo}`} className="component-container">
                     <ItemArtigo
                         titulo={titulo}
                         autor={autor}
                         id={idArtigo}
-                        onClick={onLerArtigoBtn}
+                        onClick={() => onLerArtigoBtn(idArtigo)}
                     />
                     <button className="input-style submit enxuto editBtn" onClick={onEditarArtigoBtn}>Editar</button>
                 </div>
             )
         return (
-            <div className="component-container">
+            <div key={`artigo-${idArtigo}`} className="component-container">
                 <ItemArtigo
                     titulo={titulo}
                     autor={autor}
                     id={idArtigo}
-                    onClick={onLerArtigoBtn}
+                    onClick={() => onLerArtigoBtn(idArtigo)}
                 />
             </div>
         )

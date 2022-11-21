@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import React, { useState } from 'react';
 
 function ExplorarArtigos(props) {
-    const { isLogged } = props
+    const isLogged = (localStorage.getItem('isLogged') === 'true');
     const navigate = useNavigate();
 
     const onCriarArtigoBtn = e =>{

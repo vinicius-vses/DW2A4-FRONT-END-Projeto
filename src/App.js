@@ -11,13 +11,14 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import EditarArtigo from './pages/EditarArtigo';
 import LerArtigo from './pages/LerArtigo';
+import MeuPerfil from './components/MeuPerfil';
 
 //npm start react-router-dom
 //Para baixar os routers que irão auxiiar no fluxo de navegação da aplicação
 function App() {
   return (
     <Router>
-      <Header isLogged={true} goBack={true}/>
+      <Header/>
           <Link to="/"/>
           <Link to="/login"/>
           <Link to="/cadastro"/>
@@ -25,14 +26,16 @@ function App() {
           <Link to="/criar"/>
           <Link to="/ler"/>
           <Link to="/editar"/>
+          <Link to="/meuperfil"/>
       <Routes>
           <Route exact path='/' element={<Home/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/cadastro' element={<Cadastro/>}></Route>
-          <Route path='/artigos' element={<ExplorarArtigos isLogged={true}/>}></Route>
+          <Route path='/artigos' element={<ExplorarArtigos/>}></Route>
           <Route path='/criar' element={<CriarArtigo/>}></Route>
           <Route path='/ler' element={<LerArtigo/>}></Route>
           <Route path='/editar' element={<EditarArtigo/>}></Route>
+          <Route path='/meuperfil' element={<MeuPerfil/>}></Route>
       </Routes>
       <Footer/>
     </Router>

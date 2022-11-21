@@ -1,4 +1,5 @@
 function LerArtigo(){
+
     return(
         <>
         <h1>Ler artigo</h1>

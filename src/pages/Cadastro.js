@@ -1,5 +1,6 @@
 import Input from "../components/Input";
 import {Link, useNavigate} from "react-router-dom";
+import setLoginAttributes from "../components/Auth";
 
 // MOCK PARA TESTE DE ROUTES -> ESTE ARQUIVO DEVE SER AJUSTADO TANTO EM LAYOUT QUANTO FUNCIONAMENTO!
 function Cadastro() {
@@ -8,6 +9,7 @@ function Cadastro() {
     const onSubmit = e =>{
         // CLARAMENTE PRECISAREMOS DE VALIDAÇÕES ANTES DE MANDAR PARA A HOME E CADASTRAR
         e.preventDefault();
+        setLoginAttributes(true, 'Usuário de Teste, Jorge')
         navigate('/');
     }
     return (
