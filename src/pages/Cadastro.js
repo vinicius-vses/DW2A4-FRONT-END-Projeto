@@ -9,7 +9,7 @@ function Cadastro() {
     const onSubmit = e =>{
         // CLARAMENTE PRECISAREMOS DE VALIDAÇÕES ANTES DE MANDAR PARA A HOME E CADASTRAR
         e.preventDefault();
-        setLoginAttributes(true, 'Usuário de Teste, Jorge')
+        setLoginAttributes(true, 'Usuário de Teste, Jorge', 1)
         navigate('/');
     }
     return (

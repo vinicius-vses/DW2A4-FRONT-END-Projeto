@@ -201,3 +201,12 @@
   color: #205542;
   padding-top: 8px;
 }
+
+.ler-artigo{
+  margin-left: 24px;
+  min-height: 100vh;
+}
+
+.ler-artigo p{
+  margin-right: 30vw;
+}

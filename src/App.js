@@ -36,7 +36,7 @@ function App() {
           <Route path='/artigos' element={<ExplorarArtigos/>}></Route>
           <Route path='/criar' element={<CriarArtigo/>}></Route>
           <Route path='/ler/:id' element={<LerArtigo/>}></Route>
-          <Route path='/editar' element={<EditarArtigo/>}></Route>
+          <Route path='/editar/:id' element={<EditarArtigo/>}></Route>
           <Route path='/meuperfil' element={<MeuPerfil/>}></Route>
           <Route path='*' element={<NotFound titulo='Página não encontrada' descricao='Tente novamente mais tarde.'/>}></Route>
       </Routes>

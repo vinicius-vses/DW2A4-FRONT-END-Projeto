@@ -5,8 +5,8 @@ function Artigos(props) {
     const navigate = useNavigate();
     const isLogged = (localStorage.getItem('isLogged') === 'true');
 
-    const onEditarArtigoBtn = e => {
-        navigate('/editar');
+    const onEditarArtigoBtn = id => {
+        navigate(`/editar/${id}`);
     }
 
     const onLerArtigoBtn = id => {
@@ -27,7 +27,7 @@ function Artigos(props) {
                         id={idArtigo}
                         onClick={() => onLerArtigoBtn(idArtigo)}
                     />
-                    <button className="input-style submit enxuto editBtn" onClick={onEditarArtigoBtn}>Editar</button>
+                    <button className="input-style submit enxuto editBtn" onClick={() => onEditarArtigoBtn(idArtigo)}>Editar</button>
                 </div>
             )
         return (
