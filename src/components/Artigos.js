@@ -10,12 +10,10 @@ function Artigos(props) {
     }
 
     const onLerArtigoBtn = id => {
-        console.log(id)
         navigate(`/ler/${id}`);
     }
 
     const { idUser, itens } = props; // os itens deverão vir do Banco de Dados
-    // TO FINISH
     return itens.map(item => {
         let idArtigo = item.id
         let titulo = item.titulo

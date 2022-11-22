@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Artigos from './Artigos';
 
 //mock / teste
-import { artigosFilosofica, artigosFinanceira, artigosFisicamental, artigosFuncional, onCriarArtigoBtn, onLerArtigoBtn } from '../mock';
+import { artigosFilosofica, artigosFinanceira, artigosFisicamental, artigosFuncional } from '../mock';
 //
 
 function Topicos() {

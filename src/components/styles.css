@@ -20,6 +20,7 @@
   color: white;
   font-weight: bold;
   padding: 12px;
+  white-space: nowrap;
 }
 
 .right-icon{
@@ -188,4 +189,15 @@
 
 .loading-container a{
   padding: 24px;
+}
+
+.notfound{
+  text-align: center;
+  padding: 8px;
+  min-height: 80vh;
+}
+
+.notfound h1{
+  color: #205542;
+  padding-top: 8px;
 }

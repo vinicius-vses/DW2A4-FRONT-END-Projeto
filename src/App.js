@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+import NotFound from './components/NotFound';
+
 import ExplorarArtigos from './pages/ExplorarArtigos';
 import Cadastro from './pages/Cadastro';
 import CriarArtigo from './pages/CriarArtigo';
@@ -33,9 +35,10 @@ function App() {
           <Route path='/cadastro' element={<Cadastro/>}></Route>
           <Route path='/artigos' element={<ExplorarArtigos/>}></Route>
           <Route path='/criar' element={<CriarArtigo/>}></Route>
-          <Route path='/ler' element={<LerArtigo/>}></Route>
+          <Route path='/ler/:id' element={<LerArtigo/>}></Route>
           <Route path='/editar' element={<EditarArtigo/>}></Route>
           <Route path='/meuperfil' element={<MeuPerfil/>}></Route>
+          <Route path='*' element={<NotFound titulo='Página não encontrada' descricao='Tente novamente mais tarde.'/>}></Route>
       </Routes>
       <Footer/>
     </Router>
