@@ -50,21 +50,24 @@ function LerArtigo() {
         <div>
             {
                 loading ?
-                    <a className='loading-container'>{loading ? 'CARREGANDO...' : ''}</a>
+                    <>
+                        <a className='loading-container'>{loading ? 'CARREGANDO...' : ''}</a>
+                        <div style={{minHeight:'100vh'}}/>
+                    </>
                     : artigo ?
-                    <div className='ler-artigo'>
-                        <h1>{artigo.titulo}</h1>
-                        <a>Postado por {artigo.autor} {parseInt(localStorage.getItem('userId')) === artigo.idAutor ? '(Eu)' : ''}</a>
-                        {parseInt(localStorage.getItem('userId')) === artigo.idAutor ? <button className="input-style submit enxuto editBtn" onClick={() => onEditarArtigoBtn(artigo.id)}>Editar</button> : ''}
-                        <br/><br/>
-                        <p>{// Deverá ser substituido pelo conteúdo resgatado do BD (ex: artigo.conteudo)
-                            mockDescricao
-                        }</p>
-                    </div>
+                        <div className='ler-artigo'>
+                            <h1>{artigo.titulo}</h1>
+                            <a>Postado por {artigo.autor} {parseInt(localStorage.getItem('userId')) === artigo.idAutor ? '(Eu)' : ''}</a>
+                            {parseInt(localStorage.getItem('userId')) === artigo.idAutor ? <button className="input-style submit enxuto editBtn" onClick={() => onEditarArtigoBtn(artigo.id)}>Editar</button> : ''}
+                            <br /><br />
+                            <p>{// Deverá ser substituido pelo conteúdo resgatado do BD (ex: artigo.conteudo)
+                                mockDescricao
+                            }</p>
+                        </div>
                         :
                         <NotFound titulo='Artigo não encontrado'
-                        descricao='Não foi possível localizar este artigo. <br/> Pode ser que ele tenha sido ocultado ou excluído.'
-                        alternative_action= {<Link className='input-style submit' to="/artigos">Voltar ao Explorador de Artigos</Link>}
+                            descricao='Não foi possível localizar este artigo. <br/> Pode ser que ele tenha sido ocultado ou excluído.'
+                            alternative_action={<Link className='input-style submit' to="/artigos">Voltar ao Explorador de Artigos</Link>}
                         />
             }
 
