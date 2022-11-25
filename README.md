@@ -1,3 +1,7 @@
+# PARA INICIAR O PROJETO DE O COMANDO 'npm install'
+Este projeto está sem o node_modules, mas após executar o comando ele aparecerá no projeto.
+Feito isso basta ir na pasta do projeto rodar 'npm start'
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
