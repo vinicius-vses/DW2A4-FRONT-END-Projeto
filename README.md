@@ -1,74 +1,45 @@
-# PARA INICIAR O PROJETO DE O COMANDO 'npm install'
+# Mini manual de componentes e utilização de arquivos
+## PARA INICIAR O PROJETO DÊ O COMANDO:
+> npm install
+
 Este projeto está sem o node_modules, mas após executar o comando ele aparecerá no projeto.
-Feito isso basta ir na pasta do projeto rodar 'npm start'
+Feito isso basta ir na pasta do projeto rodar 
+> 'npm start'
 
-# Getting Started with Create React App
+## Verificação de login
+A verificação de que o usuário fez login está no arquivo **src/components/Auth.js**.
+Por hora, não há validação de login/cadastro e os dados recebidos ali são meramente estáticos
+(Feitos como um mock de testes independente das entradas do usuário), mas podem ser usados normalmente sem alterações drásticas na pasta.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Função para setar sessão do usuário:
+<p align="center">
+  <img src="./screenshots/Auth.png" alt="Componente Auth" />
+</p>
+Um exemplo de utilização deste recurso para setar o usuário de testes está nas telas de login e cadastro
+que por horam passam os seguinte no OnSubmit:
 
-## Available Scripts
+>      setLoginAttributes(true, 'Usuário de Teste, Jorge', 1)
 
-In the project directory, you can run:
+Futuramente poderemos atualizar o método Auth.js para que receba o email e senha utilizados pelo usuário, assim como
+parâmetros passados por ele no Input:
 
-### `npm start`
+> setLoginAttributes(true, user.nome, user.id, user.email, user.pass)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Essas informações serão capturadas pelas demais telas com um método get nativo do JavaScript (Ilustrado na figura Componente Auth)
+Um exemplo de uso é no Header da aplicação, ao capturar o parâmetro resultado de
+> localStorage.getItem('isLogged');
+Podemos definir se queremos que nosso componente exibe a opção de fazer login/cadastro ou a opção de acessar o perfil
+do usuário:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p align="center">
+  <img src="./screenshots/Header.png" alt="Componente Header" />
+</p>
 
-### `npm test`
+Os parâmetros default da aplicação para o usuário são respectivamente:
+* isLogged = false
+* username = ''
+* userId = 0
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Considerando isso, sempre que os parâmetros default da aplicação estiverem setados, o usuário estará desconectado.
+Simulando um logout, bastaria chamar o método **setLoginAttributes()** sem passar nenhum parâmetro que automaticamente
+ele atribuiria ao Application local os parâmetros default pré estabelecidos e o isLogged = false.
