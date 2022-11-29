@@ -1,11 +1,20 @@
+import { useLocation } from 'react-router-dom';
+
 function Footer(){
+    const location = useLocation();
     return(
         <>
-        <div id="footer-margin"/>
-        <div className="footer-container">
-            <br/>
-            <span>φ 4 Free</span> <a href="" target="_self">Termos de Privacidade</a> <a href="" target="_self">Termos de Uso</a>
-        </div>
+        {
+            location.pathname === '/login' || location.pathname === '/cadastro'
+            ? null
+            : 
+            <> <div id="footer-margin"/>
+                <div className="footer-container">
+                <br/>
+                <span>φ 4 Free</span> <a href="" target="_self">Termos de Privacidade</a> <a href="" target="_self">Termos de Uso</a>
+            </div>
+            </>
+        }
         </>
     )
 }

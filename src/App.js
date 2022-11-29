@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, Routes, useLocation} from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,8 +15,6 @@ import EditarArtigo from './pages/EditarArtigo';
 import LerArtigo from './pages/LerArtigo';
 import MeuPerfil from './components/MeuPerfil';
 
-//npm start react-router-dom
-//Para baixar os routers que irão auxiiar no fluxo de navegação da aplicação
 function App() {
   return (
     <Router>

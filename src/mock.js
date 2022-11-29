@@ -24,6 +24,7 @@ export const artigosFuncional = [ //No funcionamento real o array virá direto d
     { "id": 12, "idAutor": 3, "titulo": 'Receitas de microondas para quem tem pressa', "autor": 'Beltrano Amaral de Souza' }
 ]
 
+// texto de teste da página 'Ler Artigo'
 export const mockDescricao = "Lorem ipsum dolor sit amet," + 
 " consectetur adipiscing elit. Nunc vitae velit ut eros pulvinar congue ac quis purus." + 
 " Ut cursus non dolor et molestie. Phasellus et justo condimentum urna pellentesque" + 
@@ -50,3 +51,6 @@ export const mockDescricao = "Lorem ipsum dolor sit amet," +
 " ornare mauris vitae, dignissim urna. Nunc non elementum est, sit amet hendrerit ipsum. Aenean convallis ultrices" + 
 " efficitur. Nunc at dapibus ipsum. Nam hendrerit ligula porta nisi fringilla ullamcorper. Vestibulum lectus libero," + 
 " dignissim a pretium vitae, ullamcorper vitae mi."
+
+// Usuário mock de testes
+export const usuarioLoginTestes = {'id': 1, 'nome': 'Fernando Pessoa', 'email': 'fernando@ifsp.edu.br', 'senha': '123456'}
