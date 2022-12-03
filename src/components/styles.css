@@ -34,13 +34,12 @@
 }
 
 .editBtn {
-  background-color: #064BB4;
+  background-color: #064bb4;
 }
 
 .submit:hover {
   background-color: #064616;
   color: white;
-
 }
 
 .editBtn:hover {
@@ -92,7 +91,7 @@
 }
 
 .component-container {
-  background-color: #C5F1E4;
+  background-color: #c5f1e4;
   margin: 8px 36px;
   border-radius: 16px;
   padding: 16px 24px;
@@ -112,7 +111,7 @@
 }
 
 .excluir {
-  background-color: #8E2424;
+  background-color: #8e2424;
   color: bisque;
 }
 
@@ -266,7 +265,7 @@
     align-items: center;
   }
 
-  .formulario-conectar{
+  .formulario-conectar {
     padding: 0%;
     width: 50%;
     text-align: center;
@@ -274,5 +273,38 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+  }
+
+  .sobre {
+    color: black;
+    font-size: xxx-large;
+    text-align: center;
+  }
+
+  p {
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: larger;
+  }
+
+  ul {
+    margin-left: 3%;
+    font-size: larger;
+  }
+
+  a {
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .subtitulo {
+    font-weight: bold;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }

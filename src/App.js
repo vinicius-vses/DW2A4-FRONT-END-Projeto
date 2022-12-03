@@ -14,6 +14,7 @@ import Login from './pages/Login';
 import EditarArtigo from './pages/EditarArtigo';
 import LerArtigo from './pages/LerArtigo';
 import MeuPerfil from './components/MeuPerfil';
+import DominioNegocio from './pages/DominioNegocio';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path='/ler/:id' element={<LerArtigo/>}></Route>
           <Route path='/editar/:id' element={<EditarArtigo/>}></Route>
           <Route path='/meuperfil' element={<MeuPerfil/>}></Route>
+          <Route path='/dominionegocio' element={<DominioNegocio/>}></Route>
           <Route path='*' element={<NotFound titulo='Página não encontrada' descricao='Tente novamente mais tarde.'/>}></Route>
       </Routes>
       <Footer/>
