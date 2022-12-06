@@ -45,8 +45,6 @@ function Cadastro() {
                 console.log(data);
             });
         });
-        //setLoginAttributes(true, 'Usuário de Teste, Jorge', 1)
-        //navigate('/');
     }
     return (
         <div>
