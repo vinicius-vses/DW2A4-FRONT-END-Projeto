@@ -1,14 +1,52 @@
 import Input from "../components/Input";
 import {Link, useNavigate} from "react-router-dom";
 import setLoginAttributes from "../components/Auth";
+import { useState } from 'react';
 
 function Cadastro() {
     const navigate = useNavigate();
+    let [nome, setNome] = useState("");
+    let [email, setEmail] = useState("");
+    let [senha, setSenha] = useState("");
+
+    const options = {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            "nome": nome,
+            "email": email,
+            "senha": senha
+        }),
+    };
+
+    const handleNome = (e) => {
+        e.preventDefault();
+        setNome(e.target.value);
+    };
+
+    const handleEmail = (e) => {
+        e.preventDefault();
+        setEmail(e.target.value);
+    };
+
+    const handleSenha = (e) => {
+        e.preventDefault();
+        setSenha(e.target.value);
+    };
+
 
     const onSubmit = e =>{
         e.preventDefault();
-        setLoginAttributes(true, 'Usuário de Teste, Jorge', 1)
-        navigate('/');
+        fetch('http://localhost:8000/criarPerfil', options)
+        .then((response) => {
+            response.json().then((data) => {
+                console.log(data);
+            });
+        });
+        //setLoginAttributes(true, 'Usuário de Teste, Jorge', 1)
+        //navigate('/');
     }
     return (
         <div>
@@ -23,16 +61,19 @@ function Cadastro() {
                             className="input-style"
                             label="Nome completo:   *"
                             type="text" id="nome-cadastro"
+                            onInput={handleNome}
                         />
                         <Input
                             className="input-style"
                             label="Email institucional:   *"
                             type="email" id="email-login"
+                            onInput={handleEmail}
                         />
                         <Input
                             className="input-style"
                             label="Senha:   *"
                             type="password" id="pass-login"
+                            onInput={handleSenha}
                         />
                         <Input
                             className="input-style submit"
