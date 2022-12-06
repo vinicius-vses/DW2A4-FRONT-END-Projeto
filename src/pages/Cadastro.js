@@ -42,7 +42,10 @@ function Cadastro() {
         fetch('http://localhost:8000/criarPerfil', options)
         .then((response) => {
             response.json().then((data) => {
-                console.log(data);
+                if(data.auth) {
+                    localStorage.setItem("token", data.token);
+                    navigate('/');
+                }
             });
         });
     }
